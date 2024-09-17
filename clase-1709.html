@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!---->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 17-09</title>
+</head>
+<body>
+    
+    <h1>Clase HTML 2: Tables and Forms</h1>
+
+    <table>
+
+        <caption>Titulo de la tabla</caption>
+
+        
+         <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Punishers</th>
+        </tr>
+        <tr>
+            <td>Raul</td>
+            <td>Artiles</td>
+            <td>0</td>
+        </tr>
+
+    </table>
+
+    <div class="container-forms">
+
+        <!-- Falta tener claro 1) como funcionan estos atributos a nivel teorico
+                                2) como se suelen usar y por qué en este caso concreto de los forms
+                                3) Con el onsubmit="event.preventDefault()" al darle submnit NO SE REFRESQUE 
+                                -->
+
+        <form action="http://localhost:5500/clase-1709.html" method="post" onsubmit="event.preventDefault(); console.log('event default hecho')">
+
+            <label for="name">Username
+            <input id="name" type="text" required autofocus>
+            </label>
+            
+            <label for="name">Email
+            <input id="email" type="email" required placeholder="Escribe tu email">
+            </label>
+            
+            <label for="password">Password
+                <input id="password" type="password" required>
+            </label>
+
+            <label for="age" >Age
+                <input id="age" type="number" required>
+            </label>
+            
+            <label for="submit-1">Enviar formulario
+                <input id="submit-1" type="submit" required>
+            </label>
+
+            <p>Elige todas las que quieras</p>  
+            <input name="checkbox-1" type="checkbox">
+            <input name="checkbox-1" type="checkbox">
+            <input name="checkbox-1" type="checkbox">
+                        
+            
+            
+            <p>Elige tu sexo</p>
+            <label> Masculino
+                <input type="radio" name="gender" id="male" value="male">
+            </label>
+            
+            <label> Femenino
+                <input type="radio" name="gender" id="female" value="female">
+            </label>
+
+            
+            <label for="feedback">Escribe tu comentario
+            <textarea id="feedback" type="textarea">
+            </textarea>
+
+            <select multiple>
+                <optgroup>
+                    <option value="Dog">Perrito</option>
+                    <option value="Cat">Gatito</option>
+                    <option value="Turtle">Tortuguita</option>
+                </optgroup>
+            </select>
+            
+            
+            
+            
+
+            <button type="reset" disabled>Reiniciar formulario</button>
+        
+        </form>
+
+
+
+    </div>
+
+
+
+</body>
+</html>
